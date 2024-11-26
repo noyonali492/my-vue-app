@@ -3,7 +3,7 @@
   <NavBar></NavBar>
 
   <h2>Body</h2>
-  <AllFriends :friends="friends"></AllFriends>
+  <AllFriends :friends="friends" @delete="deleteFriend"></AllFriends>
   <OnlineFriends :friends="friends"></OnlineFriends>
   <FooterNoyon></FooterNoyon>
 </template>
@@ -30,6 +30,14 @@ export default {
             {name:'C', online:false},
             {name:'D', online:true},
         ]
+    }
+  },
+  methods:{
+    deleteFriend(payload){
+      console.log(payload);
+      this.friends = this.friends.filter(friend =>{
+        return friend.name !== payload.name
+      })
     }
   }
 }
