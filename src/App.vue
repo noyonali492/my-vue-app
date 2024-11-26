@@ -3,6 +3,7 @@
   <NavBar></NavBar>
 
   <HookPart></HookPart>
+  <JsonPost></JsonPost>
   <h2>Body</h2>
   <AllFriends :friends="friends" @delete="deleteFriend"></AllFriends>
   <OnlineFriends :friends="friends"></OnlineFriends>
@@ -15,6 +16,7 @@ import NavBar from './components/NavBar.vue';
 import AllFriends from './components/AllFriends.vue';
 import OnlineFriends from './components/OnlineFriends.vue';
 import HookPart from './components/HookPart.vue';
+import JsonPost from './components/JsonPost.vue';
 
 export default {
   name: 'App',
@@ -24,6 +26,7 @@ export default {
     AllFriends,
     OnlineFriends,
     HookPart,
+    JsonPost
   },
   data(){
     return{
