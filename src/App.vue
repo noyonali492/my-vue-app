@@ -2,6 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <NavBar></NavBar>
 
+  <HookPart></HookPart>
   <h2>Body</h2>
   <AllFriends :friends="friends" @delete="deleteFriend"></AllFriends>
   <OnlineFriends :friends="friends"></OnlineFriends>
@@ -13,6 +14,7 @@ import FooterNoyon from './components/FooterNoyon.vue';
 import NavBar from './components/NavBar.vue';
 import AllFriends from './components/AllFriends.vue';
 import OnlineFriends from './components/OnlineFriends.vue';
+import HookPart from './components/HookPart.vue';
 
 export default {
   name: 'App',
@@ -20,7 +22,8 @@ export default {
     NavBar,
     FooterNoyon,
     AllFriends,
-    OnlineFriends
+    OnlineFriends,
+    HookPart,
   },
   data(){
     return{
