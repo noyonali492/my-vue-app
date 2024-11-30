@@ -3,7 +3,9 @@
         <h2 style="color: red; text-align: center;">Posts</h2><hr>
         <div v-for="post in posts" :key="post.id">
             <h3 style="color: yellow;">{{ post.title }}</h3>
-            <p>{{ post.body }}</p><hr>
+            <p>{{ $snippet(post.body) }}</p><hr>
+
+            
         </div>
     </div>
 </template>

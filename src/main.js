@@ -1,5 +1,14 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
 
-createApp(App).mount('#app')
+// Create the app instance first
+const app = createApp(App);
 
+// Define the global property
+app.config.globalProperties.$snippet = (val) => {
+    if (!val || typeof val !== 'string') return '';
+    return val.slice(0, 40);
+};
+
+// Mount the app
+app.mount('#app');
